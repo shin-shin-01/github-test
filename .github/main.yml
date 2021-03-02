@@ -1,0 +1,16 @@
+on:
+  # レビュー依頼を行なった時
+  pull_request:
+    types:
+      - review_requested
+  # レビューをしたとき
+  pull_request_review:
+  
+jobs:
+  label_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: lLabel to PullRequest when approved
+        uses: shin-shin-01/label-when-approved-action@v1.0
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

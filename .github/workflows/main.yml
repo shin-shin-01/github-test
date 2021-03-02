@@ -14,3 +14,4 @@ jobs:
         uses: shin-shin-01/label-when-approved-action@1.0
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: npm ci

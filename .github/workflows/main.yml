@@ -9,6 +9,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Notify When VersionUp Action
-        uses: shin-shin-01/notify-when-versionup-action@0.1
-      - name: print to debug
-        run: pwd | ls -a
+        uses: shin-shin-01/notify-when-versionup-action@0.1.1

@@ -1,16 +1,12 @@
-on:
-  # レビュー依頼を行なった時
-  pull_request:
-    types:
-      - review_requested
-  # レビューをしたとき
-  pull_request_review:
-  
+name: Test
+
+on: [push]
+
 jobs:
-  label_job:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Label to PullRequest when approved
-        uses: shin-shin-01/label-when-approved-action@1.0
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Notify When VersionUp Action
+        uses: shin-shin-01/notify-when-versionup-action@0.1

@@ -8,6 +8,6 @@ jobs:
     steps:
       - name: Echo github repository
         run: echo ${{ github.repository }}
-      - name: Echo github event
-        run: echo ${{ github.event }}
+      - name: Echo github.event.repository.default_branch
+        run: echo ${{ github.event.repository.default_branch }}
   

@@ -6,6 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo github value
-        run: echo ${{ github }}
+      - name: Echo github repository
+        run: echo ${{ github.repository }}
+      - name: Echo github event
+        run: echo ${{ github.event }}
   

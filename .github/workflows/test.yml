@@ -1,6 +1,9 @@
 name: Test
 
-on: [push]
+on:
+  schedule:
+    # UTC 09:00 -> JST 18:00
+    - cron: '30 9 * * *'
 
 jobs:
   build:

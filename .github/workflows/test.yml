@@ -2,8 +2,8 @@ name: Test
 
 on:
   schedule:
-    # UTC 09:00 -> JST 18:00
-    - cron: '30 9 * * *'
+    # UTC 10:00 -> JST 19:00
+    - cron: '0 10 * * *'
 
 jobs:
   build:
@@ -13,4 +13,6 @@ jobs:
         run: echo ${{ github.repository }}
       - name: Echo github.event.repository.default_branch
         run: echo ${{ github.event.repository.default_branch }}
+      - name: Echo github.ref
+        run: echo ${{ github.ref }}
   
